@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .rating {
+    &--interactive {
+      @apply text-text relative;
+
+      &:hover {
+        @apply bg-hover text-white;
+      }
+
+      &.rating--active {
+        @apply bg-primary text-white;
+      }
+
+      &:active {
+        transform: scale(0.5);
+      }
+    }
+
+    @apply rounded-full cursor-pointer w-12 h-12 transition duration-500 flex items-center  bg-gray-700  justify-center  shadow-inner;
+  }
+}
