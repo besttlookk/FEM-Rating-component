@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Bubble from "./Bubble";
 import Button from "./Button";
 import { ReactComponent as StarIcon } from "../images/icon-star.svg";
 import Number from "./Number";
+import { AppContext } from "../contexts/appContext";
 
 const StepOne = () => {
+  const { setStep, rating } = useContext(AppContext);
+
+  const handleClick = () => {
+    if (rating === 0) return;
+    setStep(2);
+  };
   return (
-    <div className="transition wrapper ">
+    <div className="transition ">
       <Bubble>
         <StarIcon className="transform " />
       </Bubble>
@@ -25,7 +32,12 @@ const StepOne = () => {
       </div>
 
       <div className="mt-6">
-        <Button />
+        <Button
+          handleClick={handleClick}
+          disabled={rating === 0 ? true : false}
+        >
+          <span>Submit</span>
+        </Button>
       </div>
     </div>
   );

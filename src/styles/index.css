@@ -492,6 +492,18 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
+.top-0{
+  top: 0px;
+}
+.left-0{
+  left: 0px;
+}
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -511,14 +523,29 @@ body {
 .flex{
   display: flex;
 }
+.hidden{
+  display: none;
+}
+.h-64{
+  height: 16rem;
+}
+.h-full{
+  height: 100%;
+}
+.h-auto{
+  height: auto;
+}
+.h-96{
+  height: 24rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
-.w-full{
-  width: 100%;
-}
 .w-90w{
   width: 90vw;
+}
+.w-full{
+  width: 100%;
 }
 .scale-75{
   --tw-scale-x: .75;
@@ -540,23 +567,29 @@ body {
 .justify-between{
   justify-content: space-between;
 }
-.rounded-full{
-  border-radius: 9999px;
+.self-stretch{
+  align-self: stretch;
 }
 .rounded-2xl{
   border-radius: 1rem;
+}
+.rounded-full{
+  border-radius: 9999px;
+}
+.border-2{
+  border-width: 2px;
 }
 .bg-bg{
   --tw-bg-opacity: 1;
   background-color: hsl(216 12% 8% / var(--tw-bg-opacity));
 }
-.bg-primary{
-  --tw-bg-opacity: 1;
-  background-color: hsl(25 97% 53% / var(--tw-bg-opacity));
-}
 .bg-card-bg{
   --tw-bg-opacity: 1;
   background-color: hsl(213 19% 18% / var(--tw-bg-opacity));
+}
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: hsl(25 97% 53% / var(--tw-bg-opacity));
 }
 .bg-gray-700{
   --tw-bg-opacity: 1;
@@ -646,8 +679,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.duration-500{
-  transition-duration: 500ms;
+.duration-1000{
+  transition-duration: 1000ms;
 }
 .duration-300{
   transition-duration: 300ms;

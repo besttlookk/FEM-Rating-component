@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
 import { AppContext } from "../contexts/appContext";
 import { ReactComponent as Illustration } from "../images/illustration-thank-you.svg";
+import Button from "./Button";
 
 const StepTwo = () => {
-  const { rating } = useContext(AppContext);
+  const { setStep, rating } = useContext(AppContext);
+
+  const handleClick = () => {
+    setStep(1);
+  };
   return (
     <div className="flex flex-col items-center ">
       <Illustration className="transform scale-75" />
@@ -21,6 +26,12 @@ const StepTwo = () => {
         We appreciate you taking the time to give a rating. If you ever need
         more support, don’t hesitate to get in touch!
       </p>
+
+      <div className="self-stretch mt-6">
+        <Button handleClick={handleClick}>
+          <span>Rate Again</span>
+        </Button>
+      </div>
     </div>
   );
 };
